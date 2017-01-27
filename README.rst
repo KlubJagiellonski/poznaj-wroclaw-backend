@@ -14,6 +14,7 @@ Poznaj Wrocław
     :alt: Codecoverage Status
 
 
+
 This `Django`_ project includes code for backend of Poznaj Wrocław application. It tries to follow
 `12 Factor App Guinness <https://12factor.net/>`_.
 
