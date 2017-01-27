@@ -1,6 +1,6 @@
 from django.urls import reverse
 from rest_framework import status
-from rest_framework.test import APITestCase
+from test_plus.test import TestCase
 
 from poznaj.images.tests.factories import ImageFactory
 from poznaj.points.models import Point
@@ -8,13 +8,15 @@ from poznaj.points.models import Point
 from .factories import PointFactory
 
 
-class TestPointsViewSet(APITestCase):
+class TestPointsViewSet(TestCase):
 
     def setUp(self):
         self.image = ImageFactory()
         self.point = PointFactory.create(images=(self.image,))
         self.list_url = reverse('point-list')
         self.detail_url = reverse('point-detail', kwargs={'pk': self.point.id})
+        self.user = self.make_user('user1')
+        self.client.login(username=self.user.username, password='password')
 
     def test_get_all_points(self):
         response = self.client.get(self.list_url, format='json')
@@ -71,3 +73,11 @@ class TestPointsViewSet(APITestCase):
         self.assertEqual(database_point.title, 'new_title')
         self.assertEqual(database_point.description, 'new_description')
         self.assertEqual(database_point.geom.wkt, 'POINT (2 2)')
+
+    def test_prevent_point_creation_if_user_is_not_authenticated(self):
+        self.client.logout()
+        response = self.client.post(
+            self.list_url,
+            data={'title': 'next point', 'description': 'desc', 'geom': 'POINT (3 3)'}
+        )
+        self.assertEqual(response.status_code, status.HTTP_403_FORBIDDEN)
