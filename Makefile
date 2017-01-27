@@ -32,7 +32,7 @@ migrate:
 	docker-compose run django python manage.py migrate
 
 test:
-	docker-compose exec django sh -c 'pip install -r requirements/test.txt && coverage run manage.py test && coverage report'
+	docker-compose exec django sh -c 'pip install -r requirements/test.txt && coverage run manage.py test --settings=config.settings.test && coverage report'
 
 enter-docker:
 	docker-compose run django bash
