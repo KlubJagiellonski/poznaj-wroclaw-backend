@@ -1,12 +1,11 @@
-Pro-tip: Try not to put anything here. Avoid dependencies in
+# Pro-tip: Try not to put anything here. Avoid dependencies in
 #	production that aren't in development.
 -r base.txt
 
 # WSGI Handler
-# ------------------------------------------------
+# -----------------------------------------------------------------------------
 gunicorn==19.6.0
 
-{% if cookiecutter.use_sentry_for_error_reporting == "y" -%}
 # Raven is the Sentry client
-# --------------------------
+# -----------------------------------------------------------------------------
 raven==5.32.0

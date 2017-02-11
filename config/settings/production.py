@@ -1,3 +1,8 @@
+import logging
+import os
+
+import raven
+
 from .common import *  # noqa
 
 # SECRET CONFIGURATION
@@ -64,6 +69,7 @@ TEMPLATES[0]['OPTIONS']['loaders'] = [
 # DATABASE CONFIGURATION
 # ------------------------------------------------------------------------------
 DATABASES['default'] = env.db('DATABASE_URL')
+DATABASES['default']['ENGINE'] = 'django.contrib.gis.db.backends.postgis'
 
 # sentry
 SENTRY_DSN = env('DJANGO_SENTRY_DSN')
@@ -122,7 +128,6 @@ LOGGING = {
 SENTRY_CELERY_LOGLEVEL = env.int('DJANGO_SENTRY_LOG_LEVEL', logging.INFO)
 RAVEN_CONFIG = {
     'dsn': SENTRY_DSN,
-    'release': raven.fetch_git_sha(os.path.dirname(os.pardir)),
 }
 
 # Custom Admin URL, use {% raw %}{% url 'admin:index' %}{% endraw %}
