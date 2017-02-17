@@ -12,7 +12,7 @@ whitenoise==3.3.0
 psycopg2==2.6.2
 
 # Images
-Pillow==3.4.2
+Pillow==4.0.0
 
 # DRFs
 djangorestframework==3.5.3
