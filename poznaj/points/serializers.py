@@ -1,4 +1,3 @@
-from rest_framework import serializers as drf_serializers
 from rest_framework_gis import serializers
 
 from .models import Point
