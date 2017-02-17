@@ -7,11 +7,6 @@ from .models import Point
 
 
 class PointSerializer(serializers.GeoFeatureModelSerializer):
-    images = drf_serializers.HyperlinkedRelatedField(
-        many=True,
-        view_name='image-detail',
-        queryset=Image.objects.all()
-    )
 
     class Meta:
         model = Point
