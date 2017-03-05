@@ -6,8 +6,8 @@ from rest_framework import status
 from test_plus.test import TestCase
 
 from poznaj.points.tests.factories import PointFactory
-from poznaj.stories.models import Story
 from poznaj.stories.filters import WRONG_LAT_LONG_TEXT
+from poznaj.stories.models import Story
 
 from .factories import StoryFactory
 
@@ -121,4 +121,3 @@ class TestStoriesViewSet(TestCase):
             response.json(),
             [WRONG_LAT_LONG_TEXT]
         )
-

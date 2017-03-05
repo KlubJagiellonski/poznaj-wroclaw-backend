@@ -1,8 +1,8 @@
 from rest_framework import permissions, viewsets
 
+from .filters import FirstPointFilter
 from .models import Story
 from .serializers import StorySerializer
-from .filters import FirstPointFilter
 
 
 class StoriesViewSet(viewsets.ModelViewSet):

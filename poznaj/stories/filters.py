@@ -2,7 +2,6 @@ from django.contrib.gis.geos import GEOSGeometry
 from rest_framework import filters
 from rest_framework.exceptions import ValidationError
 
-
 WRONG_LAT_LONG_TEXT = 'Provide float for latitude and longitude'
 
 
