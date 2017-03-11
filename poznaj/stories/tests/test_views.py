@@ -88,7 +88,10 @@ class TestStoriesViewSet(TestCase):
         )
         response = self.client.get(list_url_with_filter, fromat='json')
         self.assertEqual(response.status_code, status.HTTP_200_OK)
-        self.assertEqual([first_story.id, self.story.id], [story['id'] for story in response.json()])
+        self.assertEqual(
+            [first_story.id, self.story.id],
+            [story['id'] for story in response.json()]
+        )
 
     def test_filter_wrong_arguments(self):
         wrong_filter_url = '{}?lat=not_float&long=the_same'.format(
