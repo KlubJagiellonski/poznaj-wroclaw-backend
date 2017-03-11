@@ -12,7 +12,6 @@ class Story(models.Model):
     points = models.ManyToManyField(Point)
 
     objects = gis_models.GeoManager()
-    # objects = models.Manager()
 
     def __str__(self):
         return 'Story: {}'.format(self.title)
