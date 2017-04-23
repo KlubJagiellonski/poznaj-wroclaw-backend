@@ -1,6 +1,7 @@
 import logging
 
 from boto.s3.connection import OrdinaryCallingFormat
+
 from django.utils import six
 
 from .common import *  # noqa
@@ -59,6 +60,7 @@ AWS_STORAGE_BUCKET_NAME = env('DJANGO_AWS_STORAGE_BUCKET_NAME')
 AWS_AUTO_CREATE_BUCKET = True
 AWS_QUERYSTRING_AUTH = False
 AWS_S3_CALLING_FORMAT = OrdinaryCallingFormat()
+
 
 # AWS cache settings, don't change unless you know what you're doing:
 AWS_EXPIRY = 60 * 60 * 24 * 7
