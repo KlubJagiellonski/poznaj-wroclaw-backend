@@ -3,6 +3,8 @@ import logging
 from boto.s3.connection import OrdinaryCallingFormat
 from django.utils import six
 
+from django.utils import six
+
 from .common import *  # noqa
 
 # SECRET CONFIGURATION
@@ -71,6 +73,7 @@ AWS_HEADERS = {
         AWS_EXPIRY, AWS_EXPIRY))
 }
 MEDIA_URL = 'https://s3.amazonaws.com/%s/' % AWS_STORAGE_BUCKET_NAME
+
 
 
 # Static Assets
