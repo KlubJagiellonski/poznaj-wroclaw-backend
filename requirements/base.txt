@@ -9,7 +9,7 @@ django-environ==0.4.3
 whitenoise==3.3.0
 
 # Python-PostgreSQL Database Adapter
-psycopg2==2.7.1
+psycopg2==2.7.2
 
 # Images
 Pillow==4.2.1
