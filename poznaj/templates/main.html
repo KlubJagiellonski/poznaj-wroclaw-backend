@@ -1,0 +1,171 @@
+{% load static i18n %}
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>PoznajApp | Poznaj swoje miasto</title>
+
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}">
+
+    <!-- Custom fonts for this template -->
+    <link rel="stylesheet" href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'vendor/simple-line-icons/css/simple-line-icons.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{% static 'css/new-age.css' %}" rel="stylesheet">
+
+  </head>
+
+  <body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top"><strong>PoznajApp</strong></a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#about">O aplikacji</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#partners">Partnerzy</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#team">Zespół</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#contact">Kontakt</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="masthead">
+      <div class="container h-100">
+        <div class="row h-100">
+          <div class="col-lg-7 my-auto">
+            <div class="header-content mx-auto">
+              <h1 class="mb-5">Historia Twojego miasta jeszcze nigdy nie była Ci tak bliska</h1>
+              <a href="#" class="btn btn-outline btn-xl js-scroll-trigger">iOS</a>
+              <a href="https://play.google.com/store/apps/details?id=pl.poznajapp" class="btn btn-outline btn-xl js-scroll-trigger">Android</a>
+            </div>
+          </div>
+          <div class="col-lg-5 my-auto">
+            <div class="device-container">
+              <!-- <div class="device-mockup iphone6_plus portrait white"> -->
+                <div class="device">
+                  <div class="screen">
+                    <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
+                    <img src="{% static 'img/mockup-and_1.png' %}" class="img-fluid" alt="">
+                  </div>
+                  <div class="button">
+                    <!-- You can hook the "home button" to some JavaScript events or just remove it -->
+                  </div>
+                </div>
+              <!-- </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="download bg-primary text-center" id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 mx-auto">
+            <h2 class="section-heading">O PoznajApp</h2>
+              <p>Aplikacja pokaże Ci jakie tajemnice skrywa Twoje miasto.</p>
+              <p>Zebraliśly infromacje o ciekawych miejsach w największych polskich miastach, ułożyliśmy je w trasy. Dzięki temy możesz poznać co rzeczywiście działo się we Wrocławiu podczas powodzi tysiąclecia w 1997 i jak rzeczywiście przebiegało Postanie Warszawskie.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features" id="partners">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 mx-auto">
+            <h2 class="section-heading">Partnerzy</h2>
+
+              <img width="200px" src="https://s3.amazonaws.com/pola-app/images/logo_kodujdlapolski.png"/>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="download bg-primary text-center" id="team">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 mx-auto">
+            <h2 class="section-heading">Zespół</h2>
+
+            <h3>Programiści</h3>
+            Krzysztof Żuraw<br/>
+            Maciej Węgrecki<br/>
+            Mikołaj Rodkiewicz<br/>
+            Radosław Groński<br/>
+            Jakub Stefanowski<br/>
+            Rafał Gawlik<br/><br/>
+
+            <h3>Historycy</h3>
+            Klementyna Marszałek<br/><br/>
+
+            <h3>Koordynacja</h3>
+            Rafał Gawlik<br/><br/>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features" id="partners">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 mx-auto">
+            <h2 class="section-heading">Wydawca</h2>
+
+              <img width="200px" src="https://s3.amazonaws.com/pola-app/images/logo_kj.png"/>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2017 PoznajApp. All Rights Reserved.</p>
+        <ul class="list-inline">
+        </ul>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="{% static 'vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="{% static 'js/new-age.min.js' %}"></script>
+
+  </body>
+
+</html>
