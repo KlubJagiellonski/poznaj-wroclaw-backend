@@ -16,7 +16,7 @@ router.register(r'stories', StoriesViewSet)
 
 urlpatterns = [
     url(settings.ADMIN_URL, admin.site.urls),
-    url(r'^', MainView.as_view()),
+    url(r'^$', MainView.as_view()),
     url(r'^api/', include(router.urls)),
     url(r'^health/', include('health_check.urls')),
     url(r'^mobile/', include('poznaj.mobile.urls')),

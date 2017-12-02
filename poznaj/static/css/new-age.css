@@ -128,7 +128,7 @@ header.masthead {
     header.masthead .header-content h1 {
       font-size: 30px; }
   header.masthead .device-container {
-    max-width: 325px;
+    max-width: 505px;
     margin-right: auto;
     margin-left: auto; }
     header.masthead .device-container .screen img {
@@ -145,7 +145,7 @@ header.masthead {
         header.masthead .header-content h1 {
           font-size: 50px; }
       header.masthead .device-container {
-        max-width: 325px; } }
+        max-width: 500px; } }
 
 section.download {
   position: relative;
