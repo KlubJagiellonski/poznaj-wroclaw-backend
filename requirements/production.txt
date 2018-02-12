@@ -8,10 +8,10 @@ gunicorn==19.7.1
 
 # Raven is the Sentry client
 # -----------------------------------------------------------------------------
-raven==6.3.0
+raven==6.5.0
 
 # Static and Media Storage
 # -----------------------------------------------------------------------------
-boto3==1.4.7
+boto3==1.5.26
 django-storages==1.6.5
-Collectfast==0.5.2
+Collectfast==0.6.0
