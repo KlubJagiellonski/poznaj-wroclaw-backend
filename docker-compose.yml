@@ -24,7 +24,6 @@ services:
       - POSTGRES_PASSWORD=poznaj
       - POSTGRES_DB=poznajdb
       - DATABASE_URL=postgres://poznaj:poznaj@postgres:5432/poznajdb
-      - USE_DOCKER=yes
     volumes:
       - .:/app
     ports:
